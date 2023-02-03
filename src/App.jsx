@@ -11,7 +11,7 @@ function App() {
 
   const [num, setnum] = useState('');
 
-  
+  const [nu2, setnu2] = useState('');
 
 
  const Num =(e)=>{
@@ -20,18 +20,32 @@ function App() {
  }
 
  const Signo1 = (e)=>{
-  if (condition) {
-    
-  } else {
-    
+  const a = e.target.value
+  if (a == "+" ) {
+    setnu2(num);
+    setnum(" ");
+  } else if (a == "-") {
+    setnu2(num);
+    setnum(" ");
+  }
+  else if (a == "x") {
+    setnu2(num);
+    setnum(" ");
+  }
+  else if (a == "/") {
+    setnu2(num);
+    setnum(" ");
   }
  }
  
-
+const Result =()=>{
+      setnu2(  parseFloat(nu2) + parseFloat (num) );
+      setnum("");
+}
 function Igual(props) {
 
   return <>
-          <button class="igual" >{props.value}</button>
+          <button class="igual" onClick={Result} >{props.value}</button>
   </>
 
 }
@@ -66,7 +80,7 @@ function Signo(props) {
   return (
     <>
       <div class="content">
-      <input type="text" id="pant1"    disabled />
+      <input type="text" id="pant1"   value={nu2} disabled />
       <input type="text" id="pant1"  value={num}  disabled />
         <hr/>
         <table>
