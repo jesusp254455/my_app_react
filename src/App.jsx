@@ -8,7 +8,8 @@ import "./App.css";
 
 
 function App() {
-
+  
+ var operador;
   const [num, setnum] = useState('');
 
   const [nu2, setnu2] = useState('');
@@ -24,23 +25,40 @@ function App() {
   if (a == "+" ) {
     setnu2(num);
     setnum(" ");
+    operador = "+"
+   
   } else if (a == "-") {
     setnu2(num);
     setnum(" ");
+    operador = "-"
   }
   else if (a == "x") {
     setnu2(num);
     setnum(" ");
+    operador = "x";
+
   }
   else if (a == "/") {
     setnu2(num);
     setnum(" ");
+    operador = "/";
   }
  }
  
 const Result =()=>{
-      setnu2(  parseFloat(nu2) + parseFloat (num) );
-      setnum("");
+      if (operador == "+") {
+        setnu2(  parseFloat(nu2) + parseFloat (num) );
+        setnum("");
+      } else if(operador == "-") {
+        setnu2(  parseFloat(nu2) - parseFloat (num) );
+        setnum("");
+      }else if (operador == "x"){
+        setnu2(  parseFloat(nu2) * parseFloat (num) );
+        setnum("");
+      }else if (operador == "/"){
+        setnu2(  parseFloat(nu2) / parseFloat (num) );
+        setnum("");
+      }
 }
 function Igual(props) {
 
