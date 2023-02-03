@@ -23,10 +23,7 @@ function App() {
     <hr/>
 <table>
   <tr>
-    <th> <button onClick={() => num(7)}>7</button> </th>
-    <th> <button  onClick={() => num(8)}>8</button> </th>
-    <th> <button  onClick={() => num(9)}>9</button> </th>
-    <th> <button  onClick={() => num("/")}>/</button> </th>
+  
   </tr>
   <tr>
     <th> <button  onClick={() => num(4)}>4</button> </th>
