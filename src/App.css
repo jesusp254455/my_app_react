@@ -1,0 +1,87 @@
+body{
+  background-color: white;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.content{
+  width: 360px;
+  height: 400px;
+  background-color: black;
+  border-radius: 20px;
+  margin: auto;
+}
+input{
+  margin-top: 10px;
+  background-color: rgba(56, 54, 54, 0.342);
+  border-radius: 10px;
+  width: 352px;
+  height: 45px;
+  text-align: right;
+  color: white;
+  font-size: 20px;
+}
+button{
+  margin-right: 15px;
+  background-color: rgba(56, 54, 54, 0.342);
+  color: rgb(207, 122, 42);
+  width: 75px;
+  border-radius: 100px;
+  height: 60px;
+  font-size: 25px;
+  cursor: pointer;
+}
+hr{
+  width: 358px;
+  background: red;
+ 
+}
+.igual{
+  background-color: rgba(19, 86, 209, 0.356);
+}
+
+.material-symbols-outlined {
+  
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48
+
+}
+.icon{
+  color: rgb(207, 122, 42);
+  float: left;
+  
+}
+.icono{
+  font-size: 20px;
+  color: rgb(207, 122, 42);
+  cursor: pointer;
+}
+.a{
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+}
+.cvb{
+  float: right;
+  margin-right: none;
+  background: none;
+  color: none;
+  width: none;
+  border-radius: none;
+  height: none;
+  font-size: none;
+  cursor: pointer;
+}
