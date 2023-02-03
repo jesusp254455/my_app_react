@@ -9,11 +9,11 @@ import "./App.css";
 
 function App() {
   
- var operador;
+ 
   const [num, setnum] = useState('');
 
   const [nu2, setnu2] = useState('');
-
+  const [oper, setoper] = useState('');
 
  const Num =(e)=>{
     setnum(num + e.target.value);
@@ -25,69 +25,39 @@ function App() {
   if (a == "+" ) {
     setnu2(num);
     setnum(" ");
-    operador = "+"
+    setoper(a);
    
   } else if (a == "-") {
     setnu2(num);
     setnum(" ");
-    operador = "-"
+    setoper(a);
   }
   else if (a == "x") {
     setnu2(num);
     setnum(" ");
-    operador = "x";
+    setoper(a);
 
-<<<<<<< HEAD
-     <input type="text" id="pant1" disabled />
-      <br />
-      <input type="text" id="pant2" disabled />
-    <hr/>
-<table>
-  <tr>
-  
-  </tr>
-  <tr>
-    <th> <button  onClick={() => num(4)}>4</button> </th>
-    <th> <button  onClick={() => num(5)}>5</button> </th>
-    <th> <button  onClick={() => num(6)}>6</button> </th>
-    <th> <button  onClick={() => num("x")} >x</button> </th>
-  </tr>
-  <tr>
-    <th> <button  onClick={() => num(1)} >1</button> </th>
-    <th> <button  onClick={() => num(2)}>2</button> </th>
-    <th> <button  onClick={() => num(3)}>3</button> </th>
-    <th> <button  onClick={() => num("-")}>-</button> </th>
-  </tr>
-  <tr>
-    <th> <button  onClick={() => num(0)} >0</button> </th>
-    <th> <button  onClick={() => num(",")} >,</button> </th>
-    <th> <button   class="igual">=</button> </th>
-    <th> <button  onClick={() => num("+")} >+</button> </th>
-  </tr>
-  </table>
-    </div>
-  </>
-=======
+
   }
   else if (a == "/") {
     setnu2(num);
     setnum(" ");
-    operador = "/";
+    setoper(a);
   }
  }
->>>>>>> 26d2b3179b4933520fd88a3d2b2c50ab49a56d82
+
  
 const Result =()=>{
-      if (operador == "+") {
+      if (oper == "+") {
         setnu2(  parseFloat(nu2) + parseFloat (num) );
         setnum("");
-      } else if(operador == "-") {
+      } else if(oper == "-") {
         setnu2(  parseFloat(nu2) - parseFloat (num) );
         setnum("");
-      }else if (operador == "x"){
+      }else if (oper == "x"){
         setnu2(  parseFloat(nu2) * parseFloat (num) );
         setnum("");
-      }else if (operador == "/"){
+      }else if (oper == "/"){
         setnu2(  parseFloat(nu2) / parseFloat (num) );
         setnum("");
       }
