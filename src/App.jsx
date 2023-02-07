@@ -14,9 +14,18 @@ function App() {
 
   const [nu2, setnu2] = useState('');
   const [oper, setoper] = useState('');
+  const [decimal, setdecimal] = useState(false);
 
  const Num =(e)=>{
-    setnum(num + e.target.value);
+    if(e.target.value == ","){
+      if(decimal == false){
+      setdecimal(",")
+    }
+    }else{
+      setnum(num + e.target.value);
+    }
+
+   
     
  }
 
@@ -48,18 +57,23 @@ function App() {
 
  
 const Result =()=>{
+  setdecimal(false);
       if (oper == "+") {
-        setnu2(  parseFloat(nu2) + parseFloat (num) );
-        setnum("");
+        const num3 =  parseFloat(nu2) + parseFloat (num) ;
+        setnu2(" ");
+        setnum(num3);
       } else if(oper == "-") {
-        setnu2(  parseFloat(nu2) - parseFloat (num) );
-        setnum("");
+        const num3 =  parseFloat(nu2) - parseFloat (num) ;
+        
+        setnum(num3);
       }else if (oper == "x"){
-        setnu2(  parseFloat(nu2) * parseFloat (num) );
-        setnum("");
+        const num3 = parseFloat(nu2) * parseFloat (num) ;
+        setnu2(" ");
+        setnum(num3);
       }else if (oper == "/"){
-        setnu2(  parseFloat(nu2) / parseFloat (num) );
-        setnum("");
+         const num3 =  parseFloat(nu2) / parseFloat (num) ;
+        setnu2(" ");
+        setnum(num3);
       }
 }
 function Igual(props) {
@@ -100,8 +114,8 @@ function Signo(props) {
   return (
     <>
       <div class="content">
-      <input type="text" id="pant1"   value={nu2} disabled />
-      <input type="text" id="pant1"  value={num}  disabled />
+      <input type="text"   value={nu2} disabled />
+      <input type="text"  value={num}  disabled />
         <hr/>
         <table>
           <tr>
