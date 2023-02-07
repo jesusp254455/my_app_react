@@ -17,9 +17,9 @@ function App() {
   const [decimal, setdecimal] = useState(false);
 
  const Num =(e)=>{
-    if(e.target.value == ","){
+    if(e.target.value == "."){
       if(decimal == false){
-      setdecimal(",")
+      setnum(num+".")
     }
     }else{
       setnum(num + e.target.value);
@@ -138,7 +138,7 @@ function Signo(props) {
           </tr>
           <tr>
           <th> <Boton valor="0"/> </th>
-          <th> <Boton valor=","/> </th>
+          <th> <Boton valor="."/> </th>
           <th> <Igual  value="="/> </th>
           <th> <Signo  sg="+"/> </th>
           </tr>
