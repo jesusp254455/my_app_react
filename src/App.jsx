@@ -128,7 +128,7 @@ function Signo(props) {
           <th> <Boton valor="4"/> </th>
           <th> <Boton valor="5"/> </th>
           <th> <Boton valor="6"/> </th>
-          <th> <Signo sg="x"/> </th>
+          <th> <Signo sg=""/> </th>
           </tr>
           <tr>
           <th> <Boton valor="1"/> </th>
