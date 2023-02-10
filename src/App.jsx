@@ -64,7 +64,8 @@ const Result =()=>{
         setnum(num3);
       } else if(oper == "-") {
         const num3 =  parseFloat(nu2) - parseFloat (num) ;
-        
+        setnu2(" ");
+        setnum(num3);
         setnum(num3);
       }else if (oper == "x"){
         const num3 = parseFloat(nu2) * parseFloat (num) ;
